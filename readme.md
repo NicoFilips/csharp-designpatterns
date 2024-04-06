@@ -6,13 +6,16 @@
   <p>Source: DALL-E 3</p>
 </blockquote>
 
-[![Use Dotnet Pipeline Template](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml)
-
   <h3 align="center">csharp-designpatterns</h3>
 
   <p align="center">
     A concise summary of design pattern implementations in C#!
   </p>
+
+![C# Logo](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![](https://img.shields.io/badge/.NET-8-512BD4?style=for-the-badge&logo=.net&logoColor=white)
+
+[![Use Dotnet Pipeline Template](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml)
 
 </div>
 
