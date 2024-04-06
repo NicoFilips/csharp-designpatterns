@@ -5,6 +5,24 @@ using hands_on.Implementation;
 
 Console.WriteLine("Hello, World!");
 
+# region "Creational Patterns
+
+// -------------------------------------------------
+// Creational Patterns
+// -------------------------------------------------
+
+CreationalPatterns.Builder();
+CreationalPatterns.AbstractFactory();
+CreationalPatterns.FactoryMethod();
+CreationalPatterns.Prototype();
+CreationalPatterns.Singleton();
+
+
+// -------------------------------------------------
+# endregion
+
+
+
 # region "Structural Patterns
 
 // -------------------------------------------------
@@ -21,6 +39,8 @@ StructuralPatterns.Decorator();
 
 // -------------------------------------------------
 # endregion
+
+
 
 # region "Behavioral Patterns
 

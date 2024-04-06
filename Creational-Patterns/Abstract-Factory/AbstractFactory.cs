@@ -85,12 +85,12 @@ public class MacOSFactory : IGUIFactory
     }
 }
 
-class Client
+public class ClientExample
 {
     private IButton _button;
     private ICheckbox _checkbox;
 
-    public Client(IGUIFactory factory)
+    public ClientExample(IGUIFactory factory)
     {
         // The client code works with factories and products only through abstract types.
         _button = factory.CreateButton();

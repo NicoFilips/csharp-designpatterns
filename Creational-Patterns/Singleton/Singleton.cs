@@ -1,17 +1,17 @@
 ﻿namespace Singleton;
 
-public sealed class Singleton
+public sealed class SingletonClass
 {
     // A private static variable that holds the single instance of the class.
-    private static readonly Singleton instance = new Singleton();
+    private static readonly SingletonClass instance = new SingletonClass();
 
     // Private constructor ensures that the class cannot be instantiated from outside.
-    private Singleton()
+    private SingletonClass()
     {
     }
 
     // A public static property that provides access to the single instance.
-    public static Singleton Instance
+    public static SingletonClass Instance
     {
         get { return instance; }
     }
