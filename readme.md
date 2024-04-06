@@ -1,12 +1,14 @@
 <div align="center">
 <a href="https://github.com/NicoFilips/csharp-designpatterns/">
-  <img src="https://user-images.githubusercontent.com/35654361/320193621-9989426c-1af2-4ddb-b499-3ad81a12552f.png" alt="Logo" width="200" height="200">
+  <img src="https://github.com/NicoFilips/csharp-designpatterns/assets/35654361/9989426c-1af2-4ddb-b499-3ad81a12552f" alt="Logo" width="200" height="200">
 </a>
 <blockquote>
   <p>Source: DALL-E 3</p>
 </blockquote>
 
-[![pages-build-deployment](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/pages/pages-build-deployment)
+[![Use Dotnet Pipeline Template](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml)
+
+</div>
 
 ## About the Repository 📖
 

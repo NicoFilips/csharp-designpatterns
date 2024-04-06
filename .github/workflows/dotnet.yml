@@ -1,4 +1,4 @@
-name: Use Dotnet Pipeline Template
+name: NicoFilips-template-pipeline(build/test/publish/DeployNuget)
 
 on:
   push:
