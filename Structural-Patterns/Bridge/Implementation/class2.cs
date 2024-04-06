@@ -9,10 +9,10 @@ public class ImportantMessage : Message
     {
     }
 
-    public override void Send(string betreff, string inhalt)
+    public override void Send(string head, string body)
     {
-        string dringenderBetreff = $"Dringend: {betreff}";
-        string dringenderInhalt = $"!!! {inhalt} !!!";
-        sender.SendMessage(dringenderBetreff, dringenderInhalt);
+        string importantHead = $"urgent: {head}";
+        string importantBody = $"!!! {body} !!!";
+        sender.SendMessage(importantHead, importantBody);
     }
 }

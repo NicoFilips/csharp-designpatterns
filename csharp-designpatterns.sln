@@ -73,13 +73,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Structural-Pattern
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Structural-Patterns\Composite\Composite.csproj", "{23BB9936-BA11-474D-9980-15C57BF40FA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralPatterns.test", "StructuralPatterns.test\StructuralPatterns.test.csproj", "{41EA0D33-1B41-44D6-8C4C-D1737E6F6B93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructuralPatterns.test", "tests\StructuralPatterns.test\StructuralPatterns.test.csproj", "{41EA0D33-1B41-44D6-8C4C-D1737E6F6B93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreationalPatterns.test", "CreationalPatterns.test\CreationalPatterns.test.csproj", "{71539D82-36DD-43AF-9981-07C2570D37A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreationalPatterns.test", "tests\CreationalPatterns.test\CreationalPatterns.test.csproj", "{71539D82-36DD-43AF-9981-07C2570D37A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehavioralPatterns.test", "BehavioralPatterns.test\BehavioralPatterns.test.csproj", "{C5816431-8EFD-4423-83EA-D3050F11BD03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BehavioralPatterns.test", "tests\BehavioralPatterns.test\BehavioralPatterns.test.csproj", "{C5816431-8EFD-4423-83EA-D3050F11BD03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hands-on", "hands-on\hands-on.csproj", "{13D5BA6E-3EBC-44B3-97E3-FA2D1BB7F6F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade", "Structural-Patterns\Facade\Facade.csproj", "{D64F4918-0880-4ABC-84AE-63C3597E0851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyWeight", "Structural-Patterns\FlyWeight\FlyWeight.csproj", "{904A2378-7EE5-4244-81FA-F3BB7CDC212F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +147,14 @@ Global
 		{13D5BA6E-3EBC-44B3-97E3-FA2D1BB7F6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13D5BA6E-3EBC-44B3-97E3-FA2D1BB7F6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13D5BA6E-3EBC-44B3-97E3-FA2D1BB7F6F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64F4918-0880-4ABC-84AE-63C3597E0851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64F4918-0880-4ABC-84AE-63C3597E0851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64F4918-0880-4ABC-84AE-63C3597E0851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64F4918-0880-4ABC-84AE-63C3597E0851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{904A2378-7EE5-4244-81FA-F3BB7CDC212F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{904A2378-7EE5-4244-81FA-F3BB7CDC212F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{904A2378-7EE5-4244-81FA-F3BB7CDC212F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{904A2378-7EE5-4244-81FA-F3BB7CDC212F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E88C7A6E-F155-4F9C-A1E6-0E74053B3390} = {E0B134C2-F305-425E-9808-099B26C79F63}
@@ -176,5 +188,7 @@ Global
 		{41EA0D33-1B41-44D6-8C4C-D1737E6F6B93} = {29EE11B6-BAA4-45FB-9B82-FD5797C12CDC}
 		{71539D82-36DD-43AF-9981-07C2570D37A5} = {29EE11B6-BAA4-45FB-9B82-FD5797C12CDC}
 		{C5816431-8EFD-4423-83EA-D3050F11BD03} = {29EE11B6-BAA4-45FB-9B82-FD5797C12CDC}
+		{D64F4918-0880-4ABC-84AE-63C3597E0851} = {0A39D363-62D1-40F1-9280-5346FED7B02B}
+		{904A2378-7EE5-4244-81FA-F3BB7CDC212F} = {32028AB1-B9A6-49D4-B87F-081270E3C718}
 	EndGlobalSection
 EndGlobal
