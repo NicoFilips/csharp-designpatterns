@@ -9,7 +9,7 @@ public class ImportantMessage : Message
     {
     }
 
-    public override void Senden(string betreff, string inhalt)
+    public override void Send(string betreff, string inhalt)
     {
         string dringenderBetreff = $"Dringend: {betreff}";
         string dringenderInhalt = $"!!! {inhalt} !!!";

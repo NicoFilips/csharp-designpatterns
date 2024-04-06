@@ -5,7 +5,7 @@ public abstract class Message
 {
     protected IMessageSender sender;
 
-    public Message(INachrichtenSender sender)
+    public Message(IMessageSender sender)
     {
         this.sender = sender;
     }
