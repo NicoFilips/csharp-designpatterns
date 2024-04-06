@@ -15,6 +15,13 @@
       <ProjectReference Include="..\Behavioral-Patterns\Mediator\Mediator.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Memento\Memento.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Observer\Observer.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\Adapter\Adapter.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\Bridge\Bridge.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\Composite\Composite.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\Decorator\Decorator.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\Facade\Facade.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\FlyWeight\FlyWeight.csproj" />
+      <ProjectReference Include="..\Structural-Patterns\Proxy\Proxy.csproj" />
     </ItemGroup>
 
 </Project>

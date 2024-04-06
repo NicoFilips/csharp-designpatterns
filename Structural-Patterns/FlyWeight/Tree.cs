@@ -12,7 +12,7 @@ public class Tree
         _treeType = treeType;
     }
 
-    public void Zeichnen()
+    public void draw()
     {
         _treeType.paint(_x, _y);
     }
