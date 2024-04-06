@@ -1,4 +1,4 @@
-﻿namespace Builder;
+﻿namespace Adapter;
 
 public class Class1
 {
