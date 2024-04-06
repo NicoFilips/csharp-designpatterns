@@ -6,7 +6,7 @@
   <p>Source: DALL-E 3</p>
 </blockquote>
 
-  <h3 align="center">csharp-designpatterns</h3>
+  <h3 align="center">🔺 C# Designpatterns 🔺 </h3>
 
   <p align="center">
     A concise summary of design pattern implementations in C#!
