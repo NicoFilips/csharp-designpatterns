@@ -1,0 +1,13 @@
+name: Use Dotnet Pipeline Template
+
+on:
+  push:
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  call-template-workflow:
+    uses: NicoFilips/dotnet-pipeline-template/.github/workflows/dotnet-pipeline-template.yml@main
+    with:
+      publish: true
