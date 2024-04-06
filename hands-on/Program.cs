@@ -8,7 +8,8 @@ Console.WriteLine("Hello, World!");
 
 
 // Chain of Responsibility Pattern
-BehavioralPatterns.
+BehavioralPatterns.chainOfResponsibility();
+BehavioralPatterns.Command();
 
 
 # endregion

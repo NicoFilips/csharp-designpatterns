@@ -10,6 +10,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Behavioral-Patterns\ChainOfResponsibility\ChainOfResponsibility.csproj" />
+      <ProjectReference Include="..\Behavioral-Patterns\Command\Command.csproj" />
+      <ProjectReference Include="..\Behavioral-Patterns\Iterator\Iterator.csproj" />
     </ItemGroup>
 
 </Project>
