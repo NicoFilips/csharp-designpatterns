@@ -4,6 +4,8 @@ using Command.Implementation;
 using Iterator.Abstraction;
 using Iterator.Implementation;
 using Mediator.Implementation;
+using Memento;
+using Observer.Implementation;
 
 namespace hands_on;
 
@@ -64,7 +66,7 @@ public class BehavioralPatterns
     /// <summary>
     /// Hands-on: Iterator Designpattern
     /// </summary>
-    static void Iterator()
+    public static void Iterator()
     {
         BookCollection buchSammlung = new BookCollection();
         buchSammlung.AddBuch(new Book("Design Patterns"));
@@ -83,7 +85,7 @@ public class BehavioralPatterns
     /// <summary>
     /// Hands-on: Mediator Designpattern
     /// </summary>
-    static void Mediator(string[] args)
+    public static void Mediator()
     {
         ChatroomMediator mediator = new ChatroomMediator();
 
@@ -98,6 +100,56 @@ public class BehavioralPatterns
         user1.Send("Hi everyone!");
         user2.Send("Hello Alice!");
         user3.Send("Hey Bob and Alice!");
+    }
+    
+    
+    /// <summary>
+    /// Hands-on: Memento Designpattern
+    /// </summary>
+    public static void Memento()
+    {
+        Editor editor = new Editor();
+        Caretaker caretaker = new Caretaker(editor);
+
+        editor.SetText("Version 1");
+        caretaker.Backup();
+
+        editor.SetText("Version 2");
+        caretaker.Backup();
+
+        editor.SetText("Version 3");
+        caretaker.Backup();
+
+        Console.WriteLine(editor.GetText()); // Ausgabe: Version 3
+
+        caretaker.Undo();
+        Console.WriteLine(editor.GetText()); // Ausgabe: Version 2
+
+        caretaker.Undo();
+        Console.WriteLine(editor.GetText()); // Ausgabe: Version 1
+
+        caretaker.Redo();
+        Console.WriteLine(editor.GetText()); // Ausgabe: Version 2
+    }
+    
+    /// <summary>
+    /// Hands-on: Observer Designpattern
+    /// </summary>
+    public static void Observer()
+    {
+        WeatherStation weatherStation = new WeatherStation();
+        CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay();
+        StatisticsDisplay statisticsDisplay = new StatisticsDisplay();
+
+        weatherStation.RegisterObserver(currentDisplay);
+        weatherStation.RegisterObserver(statisticsDisplay);
+
+        weatherStation.SetMeasurements(25f, 65f, 30.4f);
+        weatherStation.SetMeasurements(27f, 70f, 29.2f);
+        weatherStation.SetMeasurements(26f, 90f, 29.2f);
+
+        weatherStation.RemoveObserver(statisticsDisplay);
+        weatherStation.SetMeasurements(28f, 90f, 29.2f);
     }
     
 }

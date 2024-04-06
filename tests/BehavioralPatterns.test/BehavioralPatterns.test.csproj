@@ -24,6 +24,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Behavioral-Patterns\Mediator\Mediator.csproj" />
+      <ProjectReference Include="..\..\Behavioral-Patterns\Memento\Memento.csproj" />
     </ItemGroup>
 
 </Project>

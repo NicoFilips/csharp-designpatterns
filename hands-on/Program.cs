@@ -4,12 +4,18 @@ using hands_on;
 
 Console.WriteLine("Hello, World!");
 
-# region 
+# region "Behavioral Patterns
 
+// -------------------------------------------------
+// Behavioral Patterns
+// -------------------------------------------------
 
-// Chain of Responsibility Pattern
 BehavioralPatterns.chainOfResponsibility();
 BehavioralPatterns.Command();
+BehavioralPatterns.Observer();
+BehavioralPatterns.Iterator();
+BehavioralPatterns.Mediator();
+BehavioralPatterns.Memento();
 
-
+// -------------------------------------------------
 # endregion

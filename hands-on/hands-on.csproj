@@ -13,6 +13,8 @@
       <ProjectReference Include="..\Behavioral-Patterns\Command\Command.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Iterator\Iterator.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Mediator\Mediator.csproj" />
+      <ProjectReference Include="..\Behavioral-Patterns\Memento\Memento.csproj" />
+      <ProjectReference Include="..\Behavioral-Patterns\Observer\Observer.csproj" />
     </ItemGroup>
 
 </Project>
