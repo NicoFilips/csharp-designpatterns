@@ -8,4 +8,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Behavioral-Patterns\ChainOfResponsibility\ChainOfResponsibility.csproj" />
+    </ItemGroup>
+
 </Project>
