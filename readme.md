@@ -6,7 +6,7 @@
   <p>Source: DALL-E 3</p>
 </blockquote>
 
-[![pages-build-deployment](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/pages/pages-build-deployment)
+[![Use Dotnet Pipeline Template](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml)
 
 </div>
 
