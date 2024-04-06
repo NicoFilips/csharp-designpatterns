@@ -27,15 +27,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototype", "Prototype", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton", "Singleton", "{B3C024E8-29FE-4F13-B280-409CE4D87032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract-Factory", "Behavioral-Patterns\Abstract-Factory\Abstract-Factory.csproj", "{E88C7A6E-F155-4F9C-A1E6-0E74053B3390}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract-Factory", "Creational-Patterns\Abstract-Factory\Abstract-Factory.csproj", "{E88C7A6E-F155-4F9C-A1E6-0E74053B3390}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Behavioral-Patterns\Builder\Builder.csproj", "{DA846A22-B0E8-477D-AE57-807290815C6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Creational-Patterns\Builder\Builder.csproj", "{DA846A22-B0E8-477D-AE57-807290815C6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory-Method", "Behavioral-Patterns\Factory-Method\Factory-Method.csproj", "{99DD4633-031A-43EF-8EEE-8FC9698923FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory-Method", "Creational-Patterns\Factory-Method\Factory-Method.csproj", "{99DD4633-031A-43EF-8EEE-8FC9698923FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Behavioral-Patterns\Prototype\Prototype.csproj", "{3D921967-83EC-4BBE-AC5D-6BDD1487256C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Creational-Patterns\Prototype\Prototype.csproj", "{3D921967-83EC-4BBE-AC5D-6BDD1487256C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Behavioral-Patterns\Singleton\Singleton.csproj", "{3A8992DC-8AC4-46F0-83B3-20FB7AA30C21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Creational-Patterns\Singleton\Singleton.csproj", "{3A8992DC-8AC4-46F0-83B3-20FB7AA30C21}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{0F767C85-67AB-4CBD-B1D7-9AC5D781261E}"
 EndProject
@@ -62,6 +62,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Memento", "Memento", "{106AF51C-E417-4FEB-A93D-FAD689553EEA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Observer", "Observer", "{874348B7-C54F-4544-A9DF-2964AC03534E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{29EE11B6-BAA4-45FB-9B82-FD5797C12CDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

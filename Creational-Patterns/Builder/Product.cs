@@ -1,4 +1,4 @@
-﻿namespace Prototype;
+﻿namespace Builder;
 
 public class Product
 {
