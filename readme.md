@@ -8,6 +8,12 @@
 
 [![Use Dotnet Pipeline Template](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml/badge.svg)](https://github.com/NicoFilips/csharp-designpatterns/actions/workflows/dotnet.yml)
 
+  <h3 align="center">csharp-designpatterns</h3>
+
+  <p align="center">
+    A concise summary of design pattern implementations in C#!
+  </p>
+
 </div>
 
 ## About the Repository 📖
