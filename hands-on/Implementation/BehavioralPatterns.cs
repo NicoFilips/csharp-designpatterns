@@ -3,6 +3,7 @@ using Command;
 using Command.Implementation;
 using Iterator.Abstraction;
 using Iterator.Implementation;
+using Mediator.Implementation;
 
 namespace hands_on;
 
@@ -78,4 +79,25 @@ public class BehavioralPatterns
             Console.WriteLine(buch.title);
         }
     }
+    
+    /// <summary>
+    /// Hands-on: Mediator Designpattern
+    /// </summary>
+    static void Mediator(string[] args)
+    {
+        ChatroomMediator mediator = new ChatroomMediator();
+
+        User user1 = new ConcreteUser(mediator, "Alice");
+        User user2 = new ConcreteUser(mediator, "Bob");
+        User user3 = new ConcreteUser(mediator, "Charlie");
+
+        mediator.RegisterUser(user1);
+        mediator.RegisterUser(user2);
+        mediator.RegisterUser(user3);
+
+        user1.Send("Hi everyone!");
+        user2.Send("Hello Alice!");
+        user3.Send("Hey Bob and Alice!");
+    }
+    
 }

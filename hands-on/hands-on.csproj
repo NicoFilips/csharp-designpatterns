@@ -12,6 +12,7 @@
       <ProjectReference Include="..\Behavioral-Patterns\ChainOfResponsibility\ChainOfResponsibility.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Command\Command.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Iterator\Iterator.csproj" />
+      <ProjectReference Include="..\Behavioral-Patterns\Mediator\Mediator.csproj" />
     </ItemGroup>
 
 </Project>
