@@ -3,7 +3,7 @@
 using hands_on;
 using hands_on.Implementation;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("These examples show how you could possibly call your designpattern Implementation! Check them out :)");
 
 # region "Creational Patterns
 

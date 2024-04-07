@@ -68,17 +68,17 @@ public class BehavioralPatterns
     /// </summary>
     public static void Iterator()
     {
-        BookCollection buchSammlung = new BookCollection();
-        buchSammlung.AddBuch(new Book("Design Patterns"));
-        buchSammlung.AddBuch(new Book("Clean Code"));
-        buchSammlung.AddBuch(new Book("Refactoring"));
+        BookCollection bookCollection = new BookCollection();
+        bookCollection.AddBuch(new Book("Design Patterns"));
+        bookCollection.AddBuch(new Book("Clean Code"));
+        bookCollection.AddBuch(new Book("Refactoring"));
 
-        IIterator iterator = buchSammlung.CreateIterator();
+        IIterator iterator = bookCollection.CreateIterator();
 
         while (iterator.HasNext())
         {
-            Book buch = (Book)iterator.Next();
-            Console.WriteLine(buch.title);
+            Book book = (Book)iterator.Next();
+            Console.WriteLine(book.title);
         }
     }
     
