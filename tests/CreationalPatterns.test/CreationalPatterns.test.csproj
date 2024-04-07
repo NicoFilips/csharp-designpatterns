@@ -23,8 +23,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Creational-Patterns\Abstract-Factory\Abstract-Factory.csproj" />
       <ProjectReference Include="..\..\Creational-Patterns\Builder\Builder.csproj" />
       <ProjectReference Include="..\..\Creational-Patterns\Prototype\Prototype.csproj" />
+      <ProjectReference Include="..\..\Creational-Patterns\Singleton\Singleton.csproj" />
     </ItemGroup>
 
 </Project>

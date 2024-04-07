@@ -1,4 +1,5 @@
 using Abstract_Factory;
+using Abstract_Factory.Implementation;
 using Builder;
 using Factory_Method;
 using Prototype;
@@ -79,6 +80,6 @@ public class CreationalPatterns
     /// </summary>
     public static void Singleton()
     {
-        SingletonClass.Instance.DoSomething();
+        SingletonService.Instance.DoSomething();
     }
 }
