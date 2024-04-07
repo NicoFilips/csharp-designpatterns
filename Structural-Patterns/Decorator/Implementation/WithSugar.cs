@@ -2,7 +2,6 @@ using Decorator.Abstraction;
 
 namespace Decorator.Implementation;
 
-// Concrete decorator for adding sugar to the coffee
 public class WithSugar : CoffeeDecorator
 {
     public WithSugar(ICoffee coffee) : base(coffee) { }

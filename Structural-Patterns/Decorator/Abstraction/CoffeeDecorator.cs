@@ -1,6 +1,5 @@
 namespace Decorator.Abstraction;
 
-// The abstract decorator class
 public abstract class CoffeeDecorator : ICoffee
 {
     protected ICoffee _coffee;

@@ -1,6 +1,5 @@
 namespace Proxy.Abstraction;
 
-// The component interface
 public interface IBankAccount
 {
     void Deposit(double amount);

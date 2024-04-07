@@ -2,7 +2,6 @@ using Proxy.Abstraction;
 
 namespace Proxy.Implementation;
 
-// The Proxy
 public class BankAccountProxy : IBankAccount
 {
     private RealBankAccount _realAccount;
@@ -47,7 +46,6 @@ public class BankAccountProxy : IBankAccount
 
     private bool Authenticate()
     {
-        // Simulate an authentication check
         Console.WriteLine("Please enter your password:");
         string input = Console.ReadLine();
         return input == _password;

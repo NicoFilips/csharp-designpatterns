@@ -1,6 +1,5 @@
 namespace FlyWeight;
 
-// Flyweight pattern
 public class TreeType
 {
     public string Type { get; private set; }

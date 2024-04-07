@@ -1,6 +1,5 @@
 ﻿namespace Facade;
 
-// One part of a complex system
 public class CodecConverter
 {
     public string Convert(string filename, string format)

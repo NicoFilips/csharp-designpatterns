@@ -2,7 +2,6 @@ using Proxy.Abstraction;
 
 namespace Proxy.Implementation;
 
-// Concrete component
 public class RealBankAccount : IBankAccount
 {
     private double _balance;
