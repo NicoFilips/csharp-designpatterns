@@ -4,7 +4,7 @@ namespace Iterator.Implementation;
 
 public class BookCollection : IAggregate
 {
-    private List<Book> _books = new List<Book>();
+    private readonly List<Book> _books = new();
 
     public IIterator CreateIterator()
     {
@@ -16,9 +16,9 @@ public class BookCollection : IAggregate
         return _books.Count;
     }
 
-    public void AddBuch(Book buch)
+    public void AddBook(Book book)
     {
-        _books.Add(buch);
+        _books.Add(book);
     }
 
     public Book GetBook(int index)

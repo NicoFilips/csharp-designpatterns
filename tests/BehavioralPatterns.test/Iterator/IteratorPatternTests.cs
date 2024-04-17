@@ -10,9 +10,9 @@ public class IteratorPatternTests
     public void IteratesOverCollectionCorrectly()
     {
         var bookCollection = new BookCollection();
-        bookCollection.AddBuch(new Book("Design Patterns"));
-        bookCollection.AddBuch(new Book("Clean Code"));
-        bookCollection.AddBuch(new Book("Refactoring"));
+        bookCollection.AddBook(new Book("Design Patterns"));
+        bookCollection.AddBook(new Book("Clean Code"));
+        bookCollection.AddBook(new Book("Refactoring"));
 
         var iterator = bookCollection.CreateIterator();
         int count = 0;
@@ -31,7 +31,7 @@ public class IteratorPatternTests
     public void HasNextReturnsFalseWhenNoMoreElements()
     {
         var bookCollection = new BookCollection();
-        bookCollection.AddBuch(new Book("Design Patterns"));
+        bookCollection.AddBook(new Book("Design Patterns"));
 
         var iterator = bookCollection.CreateIterator();
         iterator.Next(); // Advance to the end
@@ -44,7 +44,7 @@ public class IteratorPatternTests
     {
         var bookCollection = new BookCollection();
         var expectedTitle = "Design Patterns";
-        bookCollection.AddBuch(new Book(expectedTitle));
+        bookCollection.AddBook(new Book(expectedTitle));
 
         var iterator = bookCollection.CreateIterator();
         var book = (Book)iterator.Next();

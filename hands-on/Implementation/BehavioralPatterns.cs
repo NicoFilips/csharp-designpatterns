@@ -11,7 +11,6 @@ namespace hands_on;
 
 public class BehavioralPatterns
 {
-    
     /// <summary>
     /// Hands-on: Command Designpattern
     /// </summary>
@@ -69,9 +68,9 @@ public class BehavioralPatterns
     public static void Iterator()
     {
         BookCollection bookCollection = new BookCollection();
-        bookCollection.AddBuch(new Book("Design Patterns"));
-        bookCollection.AddBuch(new Book("Clean Code"));
-        bookCollection.AddBuch(new Book("Refactoring"));
+        bookCollection.AddBook(new Book("Design Patterns"));
+        bookCollection.AddBook(new Book("Clean Code"));
+        bookCollection.AddBook(new Book("Refactoring"));
 
         IIterator iterator = bookCollection.CreateIterator();
 
