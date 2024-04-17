@@ -2,16 +2,15 @@
 
 public class TreeFactory
 {
-    private Dictionary<string, TreeType> _treeTypes = new Dictionary<string, TreeType>();
+    private readonly Dictionary<string, TreeType> _treeTypes = [];
 
     public TreeType HoleTreeType(string treeType, string treeColor, string treeTexture)
     {
-        string schlüssel = $"{treeType}-{treeColor}-{treeTexture}";
-        if (!_treeTypes.ContainsKey(schlüssel))
-        {
-            _treeTypes[schlüssel] = new TreeType(treeType, treeColor, treeTexture);
-            Console.WriteLine($"Treetype create: {schlüssel}");
-        }
-        return _treeTypes[schlüssel];
+        var key = $"{treeType}-{treeColor}-{treeTexture}";
+        if (_treeTypes.ContainsKey(key)) return _treeTypes[key];
+        
+        _treeTypes[key] = new TreeType(treeType, treeColor, treeTexture);
+        Console.WriteLine($"TreeType create: {key}");
+        return _treeTypes[key];
     }
 }

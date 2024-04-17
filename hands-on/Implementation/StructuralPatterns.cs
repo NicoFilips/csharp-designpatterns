@@ -24,11 +24,11 @@ public class StructuralPatterns
 
         var baumTyp1 = baumFabrik.HoleTreeType("Eiche", "Grün", "EichenTextur");
         var baum1 = new Tree(1, 2, baumTyp1);
-        baum1.draw();
+        baum1.Draw();
 
         var baumTyp2 = baumFabrik.HoleTreeType("Eiche", "Grün", "EichenTextur");
         var baum2 = new Tree(3, 4, baumTyp2);
-        baum2.draw();
+        baum2.Draw();
     }
     
     /// <summary>

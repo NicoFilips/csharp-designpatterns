@@ -2,8 +2,9 @@ namespace FlyWeight;
 
 public class Tree
 {
-    private int _x, _y;
-    private TreeType _treeType;
+    private readonly int _x;
+    private readonly int _y;
+    private readonly TreeType _treeType;
 
     public Tree(int x, int y, TreeType treeType)
     {
@@ -12,8 +13,8 @@ public class Tree
         _treeType = treeType;
     }
 
-    public void draw()
+    public void Draw()
     {
-        _treeType.paint(_x, _y);
+        _treeType.Paint(_x, _y);
     }
 }

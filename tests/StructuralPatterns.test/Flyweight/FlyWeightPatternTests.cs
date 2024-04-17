@@ -53,7 +53,7 @@ public class FlyWeightPatternTests
         var tree = new Tree(1, 2, treeType);
 
         // Act
-        tree.draw();
+        tree.Draw();
 
         // Assert
         string output = _stringWriter.ToString().Trim();
