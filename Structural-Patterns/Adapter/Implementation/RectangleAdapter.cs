@@ -2,7 +2,6 @@ using Adapter.Abstraction;
 
 namespace Adapter.Implementation;
 
-// The Adapter
 public class RectangleAdapter : INewShape
 {
     private OldRectangle _oldRectangle;
