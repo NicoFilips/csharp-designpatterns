@@ -8,6 +8,7 @@ using Memento;
 using Observer.Implementation;
 using State.Implementation;
 using Strategy.Implementation;
+using TemplateMethod;
 
 namespace hands_on.Implementation;
 
@@ -20,17 +21,17 @@ public class BehavioralPatterns
     {
         Document document = new Document();
         List<ICommand> commands = new List<ICommand>();
-        
+
         ICommand addCommand = new AddTextCommand(document, "Hello, ");
         addCommand.Execute();
         commands.Add(addCommand);
-        
+
         ICommand addMoreTextCommand = new AddTextCommand(document, "world!");
         addMoreTextCommand.Execute();
         commands.Add(addMoreTextCommand);
 
         Console.WriteLine(document);
-        
+
         ICommand lastCommand = commands.LastOrDefault();
         if (lastCommand != null)
         {
@@ -40,8 +41,8 @@ public class BehavioralPatterns
 
         Console.WriteLine(document);
     }
-    
-    
+
+
     /// <summary>
     /// Hands-on: Chain-Of-Responsibility Designpattern
     /// </summary>
@@ -53,12 +54,12 @@ public class BehavioralPatterns
 
         infoHandler.SetNextHandler(concernHandler);
         concernHandler.SetNextHandler(featureRequestHandler);
-        
+
         infoHandler.HandleRequest("Info");
         infoHandler.HandleRequest("Concern");
         infoHandler.HandleRequest("Feature");
     }
-    
+
     /// <summary>
     /// Hands-on: Iterator Designpattern
     /// </summary>
@@ -77,7 +78,7 @@ public class BehavioralPatterns
             Console.WriteLine(book.title);
         }
     }
-    
+
     /// <summary>
     /// Hands-on: Mediator Designpattern
     /// </summary>
@@ -97,8 +98,8 @@ public class BehavioralPatterns
         user2.Send("Hello Alice!");
         user3.Send("Hey Bob and Alice!");
     }
-    
-    
+
+
     /// <summary>
     /// Hands-on: Memento Designpattern
     /// </summary>
@@ -127,7 +128,7 @@ public class BehavioralPatterns
         caretaker.Redo();
         Console.WriteLine(editor.GetText());
     }
-    
+
     /// <summary>
     /// Hands-on: Observer Designpattern
     /// </summary>
@@ -147,36 +148,44 @@ public class BehavioralPatterns
         weatherStation.RemoveObserver(statisticsDisplay);
         weatherStation.SetMeasurements(28f, 90f, 29.2f);
     }
-    
+
     /// <summary>
     /// Hands-on: State Designpattern
     /// </summary>
     public static void State()
     {
-            var trafficLight = new TrafficLight();
-            trafficLight.Change();
-            trafficLight.Change();
-            trafficLight.Change();
+        var trafficLight = new TrafficLight();
+        trafficLight.Change();
+        trafficLight.Change();
+        trafficLight.Change();
     }
-    
+
     /// <summary>
     /// Hands-on: Strategy Designpattern
     /// </summary>
     public static void Strategy()
     {
-        {
-            var saleAmount = 150.00;
-            
-            var noDiscount = new DiscountContext(new NoDiscountStrategy());
-            Console.WriteLine($"No Discount: {noDiscount.ApplyDiscount(saleAmount)}");
+        var saleAmount = 150.00;
 
-            var seasonalDiscount = new DiscountContext(new SeasonalDiscountStrategy());
-            Console.WriteLine($"Saisonal Discount: {seasonalDiscount.ApplyDiscount(saleAmount)}");
+        var noDiscount = new DiscountContext(new NoDiscountStrategy());
+        Console.WriteLine($"No Discount: {noDiscount.ApplyDiscount(saleAmount)}");
 
-            var clearanceDiscount = new DiscountContext(new ClearanceDiscountStrategy());
-            Console.WriteLine($"Clearance Discount: {clearanceDiscount.ApplyDiscount(saleAmount)}");
-        }
+        var seasonalDiscount = new DiscountContext(new SeasonalDiscountStrategy());
+        Console.WriteLine($"Saisonal Discount: {seasonalDiscount.ApplyDiscount(saleAmount)}");
+
+        var clearanceDiscount = new DiscountContext(new ClearanceDiscountStrategy());
+        Console.WriteLine($"Clearance Discount: {clearanceDiscount.ApplyDiscount(saleAmount)}");
     }
 
-    
+    /// <summary>
+    /// Hands-on: Template-Method Designpattern
+    /// </summary>
+    public static void TemplateMethod()
+    {
+        DataProcessor xmlProcessor = new XmlDataProcessor();
+        xmlProcessor.ProcessData();
+
+        DataProcessor jsonProcessor = new JsonDataProcessor();
+        jsonProcessor.ProcessData();
+    }
 }

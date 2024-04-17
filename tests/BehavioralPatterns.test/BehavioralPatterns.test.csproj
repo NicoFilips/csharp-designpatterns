@@ -31,6 +31,7 @@
       <ProjectReference Include="..\..\Behavioral-Patterns\Observer\Observer.csproj" />
       <ProjectReference Include="..\..\Behavioral-Patterns\State\State.csproj" />
       <ProjectReference Include="..\..\Behavioral-Patterns\Strategy\Strategy.csproj" />
+      <ProjectReference Include="..\..\Behavioral-Patterns\TemplateMethod\TemplateMethod.csproj" />
     </ItemGroup>
 
 </Project>

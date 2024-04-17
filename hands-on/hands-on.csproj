@@ -17,6 +17,7 @@
       <ProjectReference Include="..\Behavioral-Patterns\Observer\Observer.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\State\State.csproj" />
       <ProjectReference Include="..\Behavioral-Patterns\Strategy\Strategy.csproj" />
+      <ProjectReference Include="..\Behavioral-Patterns\TemplateMethod\TemplateMethod.csproj" />
       <ProjectReference Include="..\Creational-Patterns\Abstract-Factory\Abstract-Factory.csproj" />
       <ProjectReference Include="..\Creational-Patterns\Builder\Builder.csproj" />
       <ProjectReference Include="..\Creational-Patterns\Factory-Method\Factory-Method.csproj" />
