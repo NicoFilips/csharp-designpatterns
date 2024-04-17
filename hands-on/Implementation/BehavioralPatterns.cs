@@ -6,6 +6,7 @@ using Iterator.Implementation;
 using Mediator.Implementation;
 using Memento;
 using Observer.Implementation;
+using State.Implementation;
 
 namespace hands_on;
 
@@ -150,5 +151,17 @@ public class BehavioralPatterns
         weatherStation.RemoveObserver(statisticsDisplay);
         weatherStation.SetMeasurements(28f, 90f, 29.2f);
     }
+    
+    /// <summary>
+    /// Hands-on: Observer Designpattern
+    /// </summary>
+    public static void State()
+    {
+            var trafficLight = new TrafficLight();
+            trafficLight.Change();
+            trafficLight.Change();
+            trafficLight.Change();
+    }
+
     
 }

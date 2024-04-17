@@ -1,10 +1,9 @@
 using BehavioralPatterns.test.Observer.Util;
 using Observer.Implementation;
-
-namespace BehavioralPatterns.test.Observer;
-
 using NUnit.Framework;
 using FluentAssertions;
+
+namespace BehavioralPatterns.test.Observer;
 
 [TestFixture]
 public class WetterstationTests
