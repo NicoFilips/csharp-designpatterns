@@ -39,9 +39,9 @@ public class WeatherStation : ISubject
 
     public void SetMeasurements(float temperature, float humidity, float pressure)
     {
-        this._temperature = temperature;
-        this._humidity = humidity;
-        this._pressure = pressure;
+        _temperature = temperature;
+        _humidity = humidity;
+        _pressure = pressure;
         MeasurementsChanged();
     }
 }
