@@ -4,11 +4,11 @@ namespace Mediator.Implementation;
 
 public abstract class User
 {
-    protected IChatroomMediator _mediator;
+    protected readonly IChatroomMediator Mediator;
 
     public User(IChatroomMediator mediator)
     {
-        _mediator = mediator;
+        Mediator = mediator;
     }
 
     public abstract void Send(string message);

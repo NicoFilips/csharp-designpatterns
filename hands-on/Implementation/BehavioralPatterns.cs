@@ -88,9 +88,9 @@ public class BehavioralPatterns
     {
         ChatroomMediator mediator = new ChatroomMediator();
 
-        User user1 = new ConcreteUser(mediator, "Alice");
-        User user2 = new ConcreteUser(mediator, "Bob");
-        User user3 = new ConcreteUser(mediator, "Charlie");
+        User user1 = new SpecificUser(mediator, "Alice");
+        User user2 = new SpecificUser(mediator, "Bob");
+        User user3 = new SpecificUser(mediator, "Charlie");
 
         mediator.RegisterUser(user1);
         mediator.RegisterUser(user2);

@@ -15,7 +15,6 @@ public class ChatroomMediator : IChatroomMediator
     {
         foreach (var user in _users)
         {
-            // Der Sender erhält seine eigene Nachricht nicht
             if (user != sender)
             {
                 user.Receive(message);

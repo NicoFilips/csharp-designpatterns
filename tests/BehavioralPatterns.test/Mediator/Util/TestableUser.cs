@@ -16,7 +16,7 @@ public class TestableUser : User
     public override void Send(string message)
     {
         Console.WriteLine($"{Name} sends: {message}");
-        _mediator.SendMessage(message, this);
+        Mediator.SendMessage(message, this);
     }
 
     public override void Receive(string message)
