@@ -4,8 +4,8 @@ namespace Bridge.Implementation;
 
 public class EmailSender : IMessageSender
 {
-    public void SendMessage(string betreff, string inhalt)
+    public void SendMessage(string subject, string body)
     {
-        Console.WriteLine($"E-Mail gesendet mit Betreff: '{betreff}' und Inhalt: '{inhalt}'");
+        Console.WriteLine($"E-Mail was send with subject: '{subject}' and body: '{body}'");
     }
 }

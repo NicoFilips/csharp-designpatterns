@@ -2,5 +2,5 @@ namespace Bridge.Abstraction;
 
 public interface IMessageSender
 {
-    void SendMessage(string betreff, string inhalt);
+    void SendMessage(string subject, string body);
 }

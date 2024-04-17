@@ -4,8 +4,8 @@ namespace Bridge.Implementation;
 
 public class SmsSender : IMessageSender
 {
-    public void SendMessage(string betreff, string inhalt)
+    public void SendMessage(string subject, string body)
     {
-        Console.WriteLine($"SMS gesendet mit Betreff: '{betreff}' und Inhalt: '{inhalt}'");
+        Console.WriteLine($"SMS was send with subject: '{subject}' and body: '{body}'");
     }
 }

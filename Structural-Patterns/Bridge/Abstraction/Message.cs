@@ -2,12 +2,12 @@ namespace Bridge.Abstraction;
 
 public abstract class Message
 {
-    protected IMessageSender sender;
+    protected readonly IMessageSender Sender;
 
     public Message(IMessageSender sender)
     {
-        this.sender = sender;
+        this.Sender = sender;
     }
 
-    public abstract void Send(string betreff, string inhalt);
+    public abstract void Send(string subject, string body);
 }
