@@ -4,8 +4,8 @@ namespace Proxy.Implementation;
 
 public class BankAccountProxy : IBankAccount
 {
-    private RealBankAccount _realAccount;
-    private string _password;
+    private readonly RealBankAccount _realAccount;
+    private readonly string _password;
 
     public BankAccountProxy(string password)
     {
@@ -15,39 +15,35 @@ public class BankAccountProxy : IBankAccount
 
     public void Deposit(double amount)
     {
-        _realAccount.Deposit(amount); // Direct pass-through
+        _realAccount.Deposit(amount);
     }
 
     public bool Withdraw(double amount)
     {
-        if (Authenticate())
-        {
-            return _realAccount.Withdraw(amount);
-        }
-        else
+        if (!Authenticate())
         {
             Console.WriteLine("Authentication failed. Access denied.");
             return false;
         }
+        
+        return _realAccount.Withdraw(amount);
     }
 
     public double GetBalance()
     {
-        if (Authenticate())
-        {
-            return _realAccount.GetBalance();
-        }
-        else
+        if (!Authenticate())
         {
             Console.WriteLine("Authentication failed. Access denied.");
             return 0.0;
         }
+
+        return _realAccount.GetBalance();
     }
 
     private bool Authenticate()
     {
         Console.WriteLine("Please enter your password:");
-        string input = Console.ReadLine();
+        var input = Console.ReadLine();
         return input == _password;
     }
 }

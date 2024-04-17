@@ -18,12 +18,10 @@ public class RealBankAccount : IBankAccount
 
     public bool Withdraw(double amount)
     {
-        if (amount <= _balance)
-        {
-            _balance -= amount;
-            return true;
-        }
-        return false;
+        if (!(amount <= _balance)) return false;
+        
+        _balance -= amount;
+        return true;
     }
 
     public double GetBalance()
