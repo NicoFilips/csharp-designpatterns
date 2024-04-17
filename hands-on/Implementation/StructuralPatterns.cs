@@ -20,15 +20,15 @@ public class StructuralPatterns
     /// </summary>
     public static void Flyweight()
     {
-        TreeFactory baumFabrik = new TreeFactory();
+        TreeFactory treeFactory = new TreeFactory();
 
-        var baumTyp1 = baumFabrik.HoleTreeType("Eiche", "Grün", "EichenTextur");
-        var baum1 = new Tree(1, 2, baumTyp1);
-        baum1.Draw();
+        var treeType1 = treeFactory.HoleTreeType("Oak", "Green", "OakTexture");
+        var firstTree = new Tree(1, 2, treeType1);
+        firstTree.Draw();
 
-        var baumTyp2 = baumFabrik.HoleTreeType("Eiche", "Grün", "EichenTextur");
-        var baum2 = new Tree(3, 4, baumTyp2);
-        baum2.Draw();
+        var treeType2 = treeFactory.HoleTreeType("Oak", "Green", "OakTexture");
+        var secondTree = new Tree(3, 4, treeType2);
+        secondTree.Draw();
     }
     
     /// <summary>
@@ -36,8 +36,8 @@ public class StructuralPatterns
     /// </summary>
     public static void Facade()
     {
-        MediaConverterFacade mediaConverter = new MediaConverterFacade();
-        string result = mediaConverter.ConvertVideo("example.avi", "mp4");
+        var mediaConverter = new MediaConverterFacade();
+        var result = mediaConverter.ConvertVideo("example.avi", "mp4");
         Console.WriteLine(result);
     }
     
@@ -46,19 +46,15 @@ public class StructuralPatterns
     /// </summary>
     public static void Composite()
     {
-        // Erstellen von Blattobjekten
         IGraphic? line = new Line();
         IGraphic? circle = new Circle();
-
-        // Erstellen eines zusammengesetzten Objekts und Hinzufügen von Blattobjekten
+        
         GraphicGroup? group = new GraphicGroup();
         group.Add(line);
         group.Add(circle);
-
-        // Zeichnen des zusammengesetzten Objekts, das auch seine Kinder zeichnet
+        
         group.Draw();
-
-        // Erstellen eines weiteren zusammengesetzten Objekts
+        
         GraphicGroup group2 = new GraphicGroup();
         group2.Add(group);
         group2.Draw();
@@ -70,16 +66,9 @@ public class StructuralPatterns
     public static void Proxy()
     {
         IBankAccount accountProxy = new BankAccountProxy("correctPassword");
-        accountProxy.Deposit(100); // Deposit does not require authentication
-        
-        if (accountProxy.Withdraw(50))
-        {
-            Console.WriteLine("Withdrawal successful.");
-        }
-        else
-        {
-            Console.WriteLine("Withdrawal failed.");
-        }
+        accountProxy.Deposit(100);
+
+        Console.WriteLine(accountProxy.Withdraw(50) ? "Withdrawal successful." : "Withdrawal failed.");
 
         Console.WriteLine($"Current balance is: ${accountProxy.GetBalance()}");
     }
@@ -91,12 +80,10 @@ public class StructuralPatterns
     {
         ICoffee myCoffee = new BasicCoffee();
         Console.WriteLine($"{myCoffee.Description}: ${myCoffee.Cost()}");
-
-        // Decorate the coffee with milk
+        
         myCoffee = new WithMilk(myCoffee);
         Console.WriteLine($"{myCoffee.Description}: ${myCoffee.Cost()}");
-
-        // Further decorate the coffee with sugar
+        
         myCoffee = new WithSugar(myCoffee);
         Console.WriteLine($"{myCoffee.Description}: ${myCoffee.Cost()}");
     }
@@ -118,9 +105,9 @@ public class StructuralPatterns
     public static void Bridge()
     {
         Message meineNachricht = new ImportantMessage(new EmailSender());
-        meineNachricht.Send("Meeting", "Das Meeting beginnt um 10 Uhr.");
+        meineNachricht.Send("Meeting", "The Meeting is starting at 10 o'clock.");
 
         Message smsNachricht = new ImportantMessage(new SmsSender());
-        smsNachricht.Send("Erinnerung", "Vergiss nicht das Meeting um 10 Uhr.");
+        smsNachricht.Send("Reminder", "Don't forget the Meeting at 10 o'clock");
     }
 }

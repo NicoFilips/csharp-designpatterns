@@ -1,4 +1,3 @@
-using Abstract_Factory;
 using Abstract_Factory.Implementation;
 using Builder;
 using Factory_Method;
@@ -6,7 +5,7 @@ using Factory_Method.Implementation;
 using Prototype;
 using Singleton;
 
-namespace hands_on;
+namespace hands_on.Implementation;
 
 public class CreationalPatterns
 {
@@ -39,10 +38,8 @@ public class CreationalPatterns
         ClientCode(new ConcreteCreatorB());
     }
 
-    // Der Client-Code arbeitet mit einer Instanz eines ConcreteCreators, obwohl er durch ihre gemeinsame Basisklasse (Creator) deklariert wird.
-    public static void ClientCode(Creator creator)
+    private static void ClientCode(Creator creator)
     {
-        // ...
         Console.WriteLine("Client: I'm not aware of the creator's class," +
                           "but it still works.\n" + creator.SomeOperation());
     }

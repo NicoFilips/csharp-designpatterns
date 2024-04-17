@@ -7,8 +7,9 @@ using Mediator.Implementation;
 using Memento;
 using Observer.Implementation;
 using State.Implementation;
+using Strategy.Implementation;
 
-namespace hands_on;
+namespace hands_on.Implementation;
 
 public class BehavioralPatterns
 {
@@ -19,20 +20,17 @@ public class BehavioralPatterns
     {
         Document document = new Document();
         List<ICommand> commands = new List<ICommand>();
-
-        // Add text
+        
         ICommand addCommand = new AddTextCommand(document, "Hello, ");
         addCommand.Execute();
         commands.Add(addCommand);
-
-        // Add more text
+        
         ICommand addMoreTextCommand = new AddTextCommand(document, "world!");
         addMoreTextCommand.Execute();
         commands.Add(addMoreTextCommand);
 
         Console.WriteLine(document);
-
-        // Undo last action
+        
         ICommand lastCommand = commands.LastOrDefault();
         if (lastCommand != null)
         {
@@ -49,15 +47,13 @@ public class BehavioralPatterns
     /// </summary>
     public static void chainOfResponsibility()
     {
-        // Build up the chain
         RequestHandler infoHandler = new InfoHandler();
-        RequestHandler beschwerdeHandler = new ConcernHandler();
+        RequestHandler concernHandler = new ConcernHandler();
         RequestHandler featureRequestHandler = new FeatureRequestHandler();
 
-        infoHandler.SetNextHandler(beschwerdeHandler);
-        beschwerdeHandler.SetNextHandler(featureRequestHandler);
-
-        // Send a request trough the chain
+        infoHandler.SetNextHandler(concernHandler);
+        concernHandler.SetNextHandler(featureRequestHandler);
+        
         infoHandler.HandleRequest("Info");
         infoHandler.HandleRequest("Concern");
         infoHandler.HandleRequest("Feature");
@@ -120,16 +116,16 @@ public class BehavioralPatterns
         editor.SetText("Version 3");
         caretaker.Backup();
 
-        Console.WriteLine(editor.GetText()); // Ausgabe: Version 3
+        Console.WriteLine(editor.GetText());
 
         caretaker.Undo();
-        Console.WriteLine(editor.GetText()); // Ausgabe: Version 2
+        Console.WriteLine(editor.GetText());
 
         caretaker.Undo();
-        Console.WriteLine(editor.GetText()); // Ausgabe: Version 1
+        Console.WriteLine(editor.GetText());
 
         caretaker.Redo();
-        Console.WriteLine(editor.GetText()); // Ausgabe: Version 2
+        Console.WriteLine(editor.GetText());
     }
     
     /// <summary>
@@ -153,7 +149,7 @@ public class BehavioralPatterns
     }
     
     /// <summary>
-    /// Hands-on: Observer Designpattern
+    /// Hands-on: State Designpattern
     /// </summary>
     public static void State()
     {
@@ -161,6 +157,25 @@ public class BehavioralPatterns
             trafficLight.Change();
             trafficLight.Change();
             trafficLight.Change();
+    }
+    
+    /// <summary>
+    /// Hands-on: Strategy Designpattern
+    /// </summary>
+    public static void Strategy()
+    {
+        {
+            var saleAmount = 150.00;
+            
+            var noDiscount = new DiscountContext(new NoDiscountStrategy());
+            Console.WriteLine($"No Discount: {noDiscount.ApplyDiscount(saleAmount)}");
+
+            var seasonalDiscount = new DiscountContext(new SeasonalDiscountStrategy());
+            Console.WriteLine($"Saisonal Discount: {seasonalDiscount.ApplyDiscount(saleAmount)}");
+
+            var clearanceDiscount = new DiscountContext(new ClearanceDiscountStrategy());
+            Console.WriteLine($"Clearance Discount: {clearanceDiscount.ApplyDiscount(saleAmount)}");
+        }
     }
 
     
