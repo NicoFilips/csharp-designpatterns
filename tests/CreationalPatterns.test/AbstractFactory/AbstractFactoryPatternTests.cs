@@ -29,18 +29,18 @@ public class AbstractFactoryPatternTests
     [Test]
     public void MacOSFactory_CreatesMacOSButton()
     {
-        var factory = new MacOSFactory();
+        var factory = new MacOsFactory();
         var button = factory.CreateButton();
 
-        button.Should().BeOfType<MacOSButton>(because: "MacOSFactory should create MacOSButton objects");
+        button.Should().BeOfType<MacOsButton>(because: "MacOSFactory should create MacOSButton objects");
     }
 
     [Test]
     public void MacOSFactory_CreatesMacOSCheckbox()
     {
-        var factory = new MacOSFactory();
+        var factory = new MacOsFactory();
         var checkbox = factory.CreateCheckbox();
 
-        checkbox.Should().BeOfType<MacOSCheckbox>(because: "MacOSFactory should create MacOSCheckbox objects");
+        checkbox.Should().BeOfType<MacOsCheckbox>(because: "MacOSFactory should create MacOSCheckbox objects");
     }
 }

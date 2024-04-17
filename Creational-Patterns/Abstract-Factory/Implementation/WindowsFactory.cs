@@ -2,8 +2,7 @@ using Abstract_Factory.Abstraction;
 
 namespace Abstract_Factory.Implementation;
 
-// Concrete factory: Windows Factory
-public class WindowsFactory : IGUIFactory
+public class WindowsFactory : IGuiFactory
 {
     public IButton CreateButton()
     {

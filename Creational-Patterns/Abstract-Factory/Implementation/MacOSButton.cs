@@ -2,7 +2,7 @@ using Abstract_Factory.Abstraction;
 
 namespace Abstract_Factory.Implementation;
 
-public class MacOSButton : IButton
+public class MacOsButton : IButton
 {
     public void Paint()
     {

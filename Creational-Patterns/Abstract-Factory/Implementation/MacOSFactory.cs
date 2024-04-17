@@ -2,16 +2,15 @@ using Abstract_Factory.Abstraction;
 
 namespace Abstract_Factory.Implementation;
 
-// Concrete factory: MacOS Factory
-public class MacOSFactory : IGUIFactory
+public class MacOsFactory : IGuiFactory
 {
     public IButton CreateButton()
     {
-        return new MacOSButton();
+        return new MacOsButton();
     }
 
     public ICheckbox CreateCheckbox()
     {
-        return new MacOSCheckbox();
+        return new MacOsCheckbox();
     }
 }

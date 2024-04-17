@@ -20,7 +20,7 @@ public class CreationalPatterns
         client1.Paint();
 
         Console.WriteLine("\nClient: Testing the same client code with the second factory type...");
-        ClientExample client2 = new ClientExample(new MacOSFactory());
+        ClientExample client2 = new ClientExample(new MacOsFactory());
         client2.Paint();
     }
     

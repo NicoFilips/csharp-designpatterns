@@ -2,7 +2,7 @@ using Abstract_Factory.Abstraction;
 
 namespace Abstract_Factory.Implementation;
 
-public class MacOSCheckbox : ICheckbox
+public class MacOsCheckbox : ICheckbox
 {
     public void Paint()
     {
