@@ -7,9 +7,9 @@ public class BookCollectionIterator : IIterator
     private BookCollection _buchCollection;
     private int _currentIndex = 0;
 
-    public BookCollectionIterator(BookCollection sammlung)
+    public BookCollectionIterator(BookCollection bookCollection)
     {
-        _buchCollection = sammlung;
+        _buchCollection = bookCollection;
     }
 
     public bool HasNext()
