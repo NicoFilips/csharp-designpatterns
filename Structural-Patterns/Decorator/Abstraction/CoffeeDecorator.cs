@@ -2,13 +2,13 @@ namespace Decorator.Abstraction;
 
 public abstract class CoffeeDecorator : ICoffee
 {
-    protected ICoffee _coffee;
+    protected readonly ICoffee Coffee;
 
     public CoffeeDecorator(ICoffee coffee)
     {
-        _coffee = coffee;
+        Coffee = coffee;
     }
 
-    public virtual string Description => _coffee.Description;
+    public virtual string Description => Coffee.Description;
     public abstract double Cost();
 }
