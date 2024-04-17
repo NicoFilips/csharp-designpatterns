@@ -4,7 +4,7 @@ namespace Command.Implementation;
 
 public class Document
 {
-    private StringBuilder _text = new StringBuilder();
+    private readonly StringBuilder _text = new StringBuilder();
 
     public void AddText(string text)
     {
