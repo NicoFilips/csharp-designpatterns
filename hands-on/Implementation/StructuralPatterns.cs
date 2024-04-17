@@ -47,11 +47,11 @@ public class StructuralPatterns
     public static void Composite()
     {
         // Erstellen von Blattobjekten
-        IGraphic line = new Line();
-        IGraphic circle = new Circle();
+        IGraphic? line = new Line();
+        IGraphic? circle = new Circle();
 
         // Erstellen eines zusammengesetzten Objekts und Hinzufügen von Blattobjekten
-        GraphicGroup group = new GraphicGroup();
+        GraphicGroup? group = new GraphicGroup();
         group.Add(line);
         group.Add(circle);
 

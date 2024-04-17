@@ -9,7 +9,7 @@ public class Line : IGraphic
         Console.WriteLine("Line Drawn.");
     }
     
-    public void Add(IGraphic graphic) { }
-    public void Remove(IGraphic graphic) { }
-    public IGraphic GetChild(int index) { return null; }
+    public void Add(IGraphic? graphic) { }
+    public void Remove(IGraphic? graphic) { }
+    public IGraphic? GetChild(int index) { return null; }
 }

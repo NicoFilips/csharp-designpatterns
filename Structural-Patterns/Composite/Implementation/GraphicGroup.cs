@@ -4,7 +4,7 @@ namespace Composite.Implementation;
 
 public class GraphicGroup : IGraphic
 {
-    private List<IGraphic> _graphics = new List<IGraphic>();
+    private readonly List<IGraphic?> _graphics = [];
 
     public void Draw()
     {
@@ -15,17 +15,17 @@ public class GraphicGroup : IGraphic
         }
     }
 
-    public void Add(IGraphic graphic)
+    public void Add(IGraphic? graphic)
     {
         _graphics.Add(graphic);
     }
 
-    public void Remove(IGraphic graphic)
+    public void Remove(IGraphic? graphic)
     {
         _graphics.Remove(graphic);
     }
 
-    public IGraphic GetChild(int index)
+    public IGraphic? GetChild(int index)
     {
         if (index < _graphics.Count)
         {

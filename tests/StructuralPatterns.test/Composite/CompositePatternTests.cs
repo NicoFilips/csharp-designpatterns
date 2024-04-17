@@ -13,7 +13,7 @@ public class CompositePatternTests
     {
         // Arrange
         var graphicGroup = new GraphicGroup();
-        var graphic = new Mock<IGraphic>();
+        var graphic = new Mock<IGraphic?>();
 
         // Act
         graphicGroup.Add(graphic.Object);
@@ -28,7 +28,7 @@ public class CompositePatternTests
     {
         // Arrange
         var graphicGroup = new GraphicGroup();
-        var graphic = new Mock<IGraphic>();
+        var graphic = new Mock<IGraphic?>();
         graphicGroup.Add(graphic.Object);
 
         // Act
@@ -44,8 +44,8 @@ public class CompositePatternTests
     {
         // Arrange
         var graphicGroup = new GraphicGroup();
-        var circle = new Mock<IGraphic>();
-        var line = new Mock<IGraphic>();
+        var circle = new Mock<IGraphic?>();
+        var line = new Mock<IGraphic?>();
         graphicGroup.Add(circle.Object);
         graphicGroup.Add(line.Object);
 
