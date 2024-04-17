@@ -4,18 +4,18 @@ namespace Observer.Implementation;
 
 public class CurrentConditionsDisplay : IObserver
 {
-    private float temperature;
-    private float humidity;
+    private float _temperature;
+    private float _humidity;
 
     public void Update(float temperature, float humidity, float pressure)
     {
-        this.temperature = temperature;
-        this.humidity = humidity;
+        _temperature = temperature;
+        _humidity = humidity;
         Display();
     }
 
-    public void Display()
+    private void Display()
     {
-        Console.WriteLine($"Current conditions: {temperature}C degrees and {humidity}% humidity");
+        Console.WriteLine($"Current conditions: {_temperature}C degrees and {_humidity}% humidity");
     }
 }

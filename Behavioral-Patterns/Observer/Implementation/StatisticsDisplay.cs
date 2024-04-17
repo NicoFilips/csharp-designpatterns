@@ -4,29 +4,29 @@ namespace Observer.Implementation;
 
 public class StatisticsDisplay : IObserver
 {
-    private float maxTemp = 0.0f;
-    private float minTemp = 200;
-    private float tempSum= 0.0f;
-    private int numReadings;
+    private float _maxTemp;
+    private float _minTemp = 200;
+    private float _tempSum;
+    private int _numReadings;
 
     public void Update(float temperature, float humidity, float pressure)
     {
-        tempSum += temperature;
-        numReadings++;
+        _tempSum += temperature;
+        _numReadings++;
 
-        if (temperature > maxTemp) {
-            maxTemp = temperature;
+        if (temperature > _maxTemp) {
+            _maxTemp = temperature;
         }
  
-        if (temperature < minTemp) {
-            minTemp = temperature;
+        if (temperature < _minTemp) {
+            _minTemp = temperature;
         }
 
         Display();
     }
 
-    public void Display()
+    private void Display()
     {
-        Console.WriteLine($"Avg/Max/Min temperature = {tempSum / numReadings}/{maxTemp}/{minTemp}");
+        Console.WriteLine($"Avg/Max/Min temperature = {_tempSum / _numReadings}/{_maxTemp}/{_minTemp}");
     }
 }
