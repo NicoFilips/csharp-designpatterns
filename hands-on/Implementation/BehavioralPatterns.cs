@@ -9,6 +9,8 @@ using Observer.Implementation;
 using State.Implementation;
 using Strategy.Implementation;
 using TemplateMethod;
+using Visitor.Abstraction;
+using Visitor.Implementation;
 
 namespace hands_on.Implementation;
 
@@ -187,5 +189,26 @@ public class BehavioralPatterns
 
         DataProcessor jsonProcessor = new JsonDataProcessor();
         jsonProcessor.ProcessData();
+    }
+
+    /// <summary>
+    /// Hands-on: Visitor Designpattern
+    /// </summary>
+    public static void Visitor()
+    {
+        List<IElement> elements =
+        [
+            new ElementA(),
+            new ElementB()
+        ];
+
+        IVisitor visitor1 = new ConcreteVisitor1();
+        IVisitor visitor2 = new ConcreteVisitor2();
+
+        foreach (var element in elements)
+        {
+            element.Accept(visitor1);
+            element.Accept(visitor2);
+        }
     }
 }

@@ -57,6 +57,7 @@ BehavioralPatterns.Memento();
 BehavioralPatterns.State();
 BehavioralPatterns.Strategy();
 BehavioralPatterns.TemplateMethod();
+BehavioralPatterns.Visitor();
 
 // -------------------------------------------------
 # endregion
