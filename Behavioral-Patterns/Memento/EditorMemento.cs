@@ -2,14 +2,14 @@
 
 public class EditorMemento
 {
-    private string _state;
+    private readonly string? _state;
 
-    public EditorMemento(string state)
+    public EditorMemento(string? state)
     {
         _state = state;
     }
 
-    public string GetState()
+    public string? GetState()
     {
         return _state;
     }

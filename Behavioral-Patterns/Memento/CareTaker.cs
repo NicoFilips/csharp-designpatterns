@@ -2,8 +2,8 @@ namespace Memento;
 
 public class Caretaker
 {
-    private List<EditorMemento> _mementos = new List<EditorMemento>();
-    private Editor _editor;
+    private readonly List<EditorMemento> _mementos = new();
+    private readonly Editor _editor;
     private int _currentIndex = -1;
 
     public Caretaker(Editor editor)

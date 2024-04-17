@@ -2,14 +2,14 @@ namespace Memento;
 
 public class Editor
 {
-    private string _content;
+    private string? _content;
 
-    public void SetText(string text)
+    public void SetText(string? text)
     {
         _content = text;
     }
 
-    public string GetText()
+    public string? GetText()
     {
         return _content;
     }
